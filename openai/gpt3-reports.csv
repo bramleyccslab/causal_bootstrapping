@@ -1,0 +1,21 @@
+,exp_id,condition,phase,report
+0,1,construct,1,"Stripes are adding one segment for each stripe, while spots are subtracting one segment for each spot."
+1,1,construct,2,The stripes and spots are not changing the segments.
+2,1,decon,1,The stripes and spots on the egg are not affecting the segments.
+3,1,decon,2,The stripes and spots on the magic egg are changing the resulting segments by adding or subtracting from the number of segments that are touching the egg.
+4,1,combine,1,The number of stripes on the egg determines how many segments the egg will touch. The number of spots on the egg does not appear to have any effect.
+5,1,combine,2,"The stripes and spots on the magic egg are changing the segments because they are touching different segments. The egg with one stripe and one spot is touching two segments, while the egg with one stripe and three spots is touching three segments."
+6,2,construct,1,"The stripes and spots on the magic egg are changing the number of segments that the egg is touching. The more stripes and spots there are, the fewer segments the egg is touching."
+7,2,construct,2,"The stripes and spots are changing the segments by making the egg more magical. The more stripes and spots there are, the more magical the egg becomes, and the more segments it can touch."
+8,2,decon,1,The stripes and spots on the magic egg seem to be affecting the segments in a way that is not yet known.
+9,2,decon,2,"The stripes and spots on the magic egg are changing the segments by adding or subtracting from the total number of segments. If there is one stripe and one spot, it will add two segments. If there are two stripes and two spots, it will subtract four segments."
+10,2,combine,1,"The stripes and spots on the egg seem to be dividing the segments into smaller parts. The more stripes or spots there are, the smaller the segments become."
+11,2,combine,2,The stripes and spots on the egg seem to be dividing the segments into halves.
+12,3,combine,1,The stripes and spots on the magic egg are changing the segments by adding or subtracting from the total number of segments.
+13,3,combine,2,"The stripes are dividing the segments into thirds, while the spots are halving the segments."
+14,3,flip,1,The stripes and spots are not changing the segments.
+15,3,flip,2,"The stripes and spots on the egg seem to be affecting the number of segments the egg is touching. If the egg has one stripe and one spot, it is touching two segments. If the egg has one stripe and two spots, it is touching one segment. If the egg has one stripe and three spots, it is not touching any segments."
+16,4,combine,1,"The stripes and spots on the magic egg are changing the segments by breaking them up into smaller pieces. The egg is essentially dividing the segments into smaller sections, which makes it easier for the egg to touch more segments at once."
+17,4,combine,2,It appears that stripes and spots are both reducing the number of resulting segments.
+18,4,flip,1,The stripes and spots are not changing the segments.
+19,4,flip,2,"The stripes and spots on the magic egg are changing the segments by adding or subtracting from the total number of segments. One stripe subtracts one segment, while one spot adds one segment."

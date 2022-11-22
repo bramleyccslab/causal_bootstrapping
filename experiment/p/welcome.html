@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Experiment</title>
+  </head>
+  <body>
+    <div id="landing" class="base">
+      <h1>The University of Edinburgh, Psychology</h1>
+        <div class="frame" id="consent-div">
+          <h2>Information for participants</h2>
+          <div id="consent-info">
+            <p>
+              <b>Nature of the study.</b>
+              You are invited to participate in a study which involves looking at colored shapes having effects on other colored shapes,
+              and making judgments about these effects.
+              Once you finish, we may have some questions about your experience (e.g., age, gender, comment).
+              Your responses will be recorded.
+              Your session should last for 5 to 10 minutes.
+              You will be given full instructions shortly.
+            </p>
+            <p
+              ><b>Compensation.</b>
+              You will be paid &#163;1.25 and up to &#163;1.97 with bonus for your participation in this study.
+            </p>
+            <p>
+              <b>Risks and benefits.</b>
+              There are no known risks to participation in this study.
+              Other than the payment mentioned, there no tangible benefits to you,
+              however you will be contributing to our knowledge about human reasoning.
+            </p>
+            <p>
+              <b>Confidentiality and use of data.</b>
+              All the information we collect during the course of the research will be processed in accordance with Data Protection Law.
+              In order to safeguard your privacy, we will never share personal information (like names or dates of birth) with anyone outside the research team;
+              if you agree and want to be contacted for future studies, we will add your contact details to our secure participant database.
+              Your data will be referred to by a unique participant number rather than by name).
+              Please note that we will temporarily collect your worker ID to prevent repeat participation, however we will never share this information with anyone outside the research team.
+              We will store any personal data (e.g., audio/video recordings, signed forms) using a password protected, encrypted hard drive. The anonymized data collected during this study will be used for research purposes.
+              With your permission, identifiable data such as recordings may also be used for research or teaching purposes,
+              and may be shared with other researchers or with the general public (e.g., we may make it available through the world wide web, or use it in TV or radio broadcasts).</p>
+            <p>
+              <b>What are my data protection rights?</b>
+              The University of Edinburgh is a Data Controller for the information you provide.
+              You have the right to access information held about you.
+              Your right of access can be exercised in accordance Data Protection Law.
+              You also have other rights including rights of correction, erasure and objection.
+              For more details, including the right to lodge a complaint with the Information Commissioner Office, please visit www.ico.org.uk.
+              Questions, comments and requests about your personal data can also be sent to the University Data Protection Officer at <a href="mailto:dpo@ed.ac.uk">dpo@ed.ac.uk</a>.
+            </p>
+            <p>
+              <b>Voluntary participation and right to withdraw.</b>
+              Your participation is voluntary, and you may withdraw from the study at any time and for any reason.
+              If you withdraw from the study during or after data gathering,
+              we will delete your data and there is no penalty or loss of benefits to which you are otherwise entitled.
+            </p>
+            <p>
+              If you have any questions about what you just read, please feel free to ask, or contact us later.
+              You can contact us by email at <a href="mailto:bramleylab@ed.ac.uk">bramleylab@ed.ac.uk</a>.
+              This project has been approved by PPLS Ethics committee.
+              If you have questions or comments regarding your own or your child&rsquo;s rights as a participant,
+              they can be contacted at 0131 650 4020 or <a href="mailto:ppls.ethics@ed.ac.uk">ppls.ethics@ed.ac.uk</a>.</p>
+            <p>By accepting this HIT, you consent to the following:</p>
+            <ol>
+                <li><b>I agree to participate in this study.</b></li>
+                <li>I confirm that I have read and understood <b>how my data will be stored and used</b>.</li>
+                <li>I understand that I have the right to <b>terminate this session</b> at any point. </li>
+            </ol>
+          </div>
+        </div>
+        <div class="button-group-vc">
+          <button class="big-button" id="consent-btn" disabled>I Agree</button>
+        </div>
+      </div>
+      <div id="reminder" class="base" style="display:none;">
+        <h1>Thank you for participating in this study</h1>
+        <div class="frame" style="height:400px;">
+          <p>Please note that:</p>
+          <ul>
+            <li>You will have to pass a test on your understanding before you can start the experiment.</li>
+            <li>Please minimize the chances of possible distractions (switch off messengers, email, music,...)</li>
+            <li>Please make this window as large as possible (full screen best).</li>
+            <li><b>Do not refresh this page during the experiment.</b></li>
+          </ul>
+        </div>
+        <div class="button-group-vc">
+          <!-- <a class="big-button" href="{{root_string}}">Sure</a> -->
+          <a href="task.html" class="big-button" id='sure-btn'>Sure</a>
+        </div>
+      </div>
+  </body>
+  <script type='text/javascript'>
+    const checkScrollHeight = (text, btn) => ((text.scrollTop + text.offsetHeight) >= text.scrollHeight) ? btn.disabled = false : null;
+    const consentBtn = document.getElementById("consent-btn");
+    const consentText = document.getElementById("consent-info");
+    consentText.addEventListener("scroll", () => checkScrollHeight(consentText, consentBtn), false);
+    consentBtn.onclick = () => {
+      document.getElementById("landing").style.display = "none";
+      document.getElementById("reminder").style.display = "block";
+    }
+  </script>
+</html>

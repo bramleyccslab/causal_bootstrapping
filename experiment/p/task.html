@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Magic Eggs</title>
+  </head>
+  <body>
+    <div id="prolific_id" class="base">
+      <h3>Enter your Prolific ID to continue:</h3>
+      <textarea name="prolific_id_text" id="prolific_id_text" placeholder=""></textarea>
+      <div class='button-group-vc'>
+      <button class='big-button' id='prolific_id-btn'>Confirm</button>
+      </div>
+    </div>
+    <div id="instruction" class="base" style="display: none;">
+      <h1>Instructions</h1>
+      <div id="box-desc-1">
+        <div class="frame">
+          <div id="instruction-text">
+            <p>Imagine you are playing in a magical field of wonders, where you encounter some magic eggs and some sticks.</p>
+            <p>The eggs seem to differ in terms of how many stripes and dots they have on them:</p>
+            <div id='intro-eg'></div>
+            <p>And the sticks are of various lengths (have different numbers of segments):</p>
+            <div id='intro-blocks'>
+              <div id="intro-blocks-1"></div><div id="intro-blocks-2"></div><div id="intro-blocks-3"></div>
+            </div>
+            <p>
+              Aha! You discover that when a magic egg touches a stick, it can cause the length of the stick to change
+              (i.e. increasing or decreasing how many segments it has).
+            </p>
+            <div id='intro-touch'>
+              <div id="intro-touch-1"></div><div id="intro-touch-2"></div>
+            </div>
+            <hr>
+            <h2>Task setup</h2>
+            <p>
+              Your task is to figure out the <b>causal relationship between the features of the magic eggs (spots and stripes)
+              and the eggs&rsquo; effect on the length (number of segments) of the stick it touches.</b>
+            </p>
+            <p><b>Hint:</b> It's the same causal relationship all the way through.</p>
+            <p>
+              To help you do this, you will have the chance to test several magic eggs on several sticks.
+              For each egg-stick pair, you can click the <q>Test</q> button and watch what happens to the stick.
+              You can test each pair as many times as you like.
+            </p>
+            <div id="intro-demo"></div>
+            <p>
+              Once you have performed three tests, you will be asked to write down your best guess of how the magic eggs work.
+              <b>If you guess correctly, you will win a bonus of &#163;0.20.</b>
+            </p>
+            <p>
+              Then, you will be asked to make 8 predictions about what some new, untested magic eggs will do to some new untested sticks.
+              For each of these that you get right, you will win an <b>additional bonus of &#163;0.02</b>.
+            </p>
+            <p>
+              After this, you will get to perform three more tests.
+              Then, you will make a second, updated guess about how the eggs work.
+              If you guess correctly, you will win <b>another &#163;0.20 bonus</b>.
+            </p>
+            <p>
+              Finally, you will make 8 more predictions about what some new, untested magic eggs will do to some new untested sticks.
+              For each of these that you get right, you will win an <b>additional bonus of &#163;0.02</b>.
+            </p>
+            <p>
+              This means you can make up to <b>&#163;1.97</b> if you get everything correct,
+              but even if you do not you will still make the basic payment of &#163;1.25.
+            </p>
+            <p>
+              <b>Important:</b>
+              Your text answers will be checked by a human before bonuses are paid.
+              Nonsensical or copy-pasted responses will result in receiving zero bonus or outright rejection of your task.
+            </p>
+          </div>
+        </div>
+        <div class='button-group-vc'>
+          <button class='big-button' id='desc-next-btn'>Next</button>
+          <button class='big-button' id='dev-skip-intro'>Dev skip</button>
+        </div>
+      </div>
+    </div>
+    <div id="comprehension" class="base" style="display: none;">
+      <h1>Check your understanding</h1>
+      <div class="frame">
+        <form id='prequiz'>
+          <ol>
+            <li>Magic eggs can cause the sticks to change length</li>
+            <p>
+              <input type="radio" name="check1">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check1">False
+            </p>
+            <li>Spots and stripes of a magic egg are important indicators of how its magic power work</li>
+            <p>
+              <input type="radio" name="check2">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check2">False
+            </p>
+            <!-- <li>You will need to keep track of the magic effects if you want to guess correctly</li>
+            <p>
+              <input type="radio" name="check3">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check3">False
+            </p> -->
+            <li>Your second guess has to be the same as your first guess</li>
+            <p>
+              <input type="radio" name="check4">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check4">False
+            </p>
+            <li>Your second guess has to explain the first three pairs of objects as well</li>
+            <p>
+              <input type="radio" name="check5">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check5">False
+            </p>
+            <li>Your goal is to make the sticks longer</li>
+            <p>
+              <input type="radio" name="check6">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check6">False
+            </p>
+            <li>You win bonuses for guessing the true causal relationship and for making correct predictions about new egg and stick combinations.</li>
+            <p>
+              <input type="radio" name="check7">Correct&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="check7">False
+            </p>
+          </ol>
+        </form>
+      </div>
+      <div class='button-group-vc'>
+        <button class='big-button' id='check-btn' disabled>Check</button>
+      </div>
+    </div>
+    <div id="pass" style="display: none;">
+      <h2>Congratulations! Now proceed to the experiment.</h2>
+      <div class='button-group-vc'>
+        <button class='big-button' id='pass-btn'>&gt;&gt;</button>
+      </div>
+    </div>
+    <div id="retry" style="display: none;">
+      <h2>Oooops, please read the instructions carefully and try again.</h2>
+      <div class='button-group-vc'>
+        <button class='big-button' id='retry-btn'>&lt;&lt;</button>
+      </div>
+    </div>
+    <div id="task" class="base">
+      <div id='task-alice' style="display: none;" >
+        <div id="task-cover-a" >
+          <h1>First, check out these magic eggs:</h1>
+          <button class='big-button' id='dev-skip-alice'>Skip A</button>
+        </div>
+        <div id="task-train-a" ></div>
+        <div id="task-input-a" style="display: none;" ></div>
+        <div id="task-gen-a" style="display: none;" >
+          <p class="incentive" style="font-size: 25px;">Remember there is a bonus if you make a correct prediction.</p>
+        </div>
+        <div id="task-change-a"style="display: none;" ></div>
+      </div>
+      <div id="task-bob" style="display: none;" >
+        <div id="task-cover-b" >
+          <h1>Now, check out more of them:</h1>
+          <h3>(You can scroll up to see previous checks)<h3>
+          <button class='big-button' id='dev-skip-bob'>Skip B</button>
+        </div>
+        <div id="task-train-b" ></div>
+        <div id="task-input-b" style="display: none;" ></div>
+        <div id="task-gen-b" style="display: none;" >
+          <p class="incentive" style="font-size: 25px;">Remember there is a bonus if you make a correct prediction.</p>
+        </div>
+      </div>
+      <!-- <div id="task-comp" style="display: none;" >
+        <div id="task-cover-c" >
+          <button class='big-button' id='dev-skip-comp'>Skip C</button>
+          <h3><b>Actually, the magic eggs Alice and Bob found are from the same hen! In other words, all of the magic eggs you tested share the <em>same</em> magic power.</b></h3>
+          <h3>Here is a summary of all the tests you did so far:</h3>
+        </div>
+        <div id="task-train-c" ></div>
+        <div id="task-input-c" ></div>
+        <div id="task-gen-c" style="display: none;" >
+          <h3><b>How will the following blocks look like after being touched with the provided magic egg?</b> (You can compose answer by clicking on the blocks)</h3>
+          <p class="incentive" style="font-size: 25px;">Remember there is a $0.20 bonus if you make a correct prediction.</p>
+        </div>
+      </div> -->
+    </div>
+    <div id="debrief" class="base" style="display: none;" >
+      <h1>Thank you for your contributions to science</h1>
+      <h4>You will be eligible for full payment once you answer the following questions.</h4>
+      <h4><b>Note</b>: To continue, please answer <span style="color:red">all questions</span>.</h4>
+      <form id="postquiz"  class='frame' action="debrief" method="post">
+        <b>1.&nbsp;</b>How old are you?:
+         <input
+            id="age" name="age" class="posttestQ" type="number"
+            maxlength = "3" min="18" max="100"step = "1"
+          > years
+        </p>
+        <p>
+          <b>2.&nbsp;</b>What is your gender?
+          <select id="sex" name="sex" class="posttestQ">
+            <option value="noresp" SELECTED></option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+            <option value="noresponse">I&rsquo;d prefer not to respond</option>
+          </select>
+        </p>
+        <p>
+          <b>3.&nbsp;</b>On a scale of 1-10 (where 10 is the most engaged), please rate how <b>ENGAGING</b> you found the learning task:
+          <select id="engagement" name="engagement" class="posttestQ">
+            <option value="--" SELECTED>
+            <option value="10">10 - Very engaging</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5 - Moderately</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+            <option value="0">0 - Not engaged</option>
+          </select>
+        </p>
+        <p>
+          <b>4.&nbsp;</b>On a scale of 1-10 (where 10 is the most difficult), please rate how <b>DIFFICULT</b> you found the learning task:
+          <select id="difficulty" name="difficulty" class="posttestQ">
+            <option value="--" SELECTED>
+            <option value="10">10 - Very difficult</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5 - Moderately difficult</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+            <option value="0">0 - Not difficult at all</option>
+          </select>
+        </p>
+        <p><b>5.&nbsp;</b>Do you have any comments regarding the experiment?</p>
+        <textarea name="feedback" id="feedback" placeholder="Please type here"></textarea>
+      </form>
+      <div class='button-group-vc'>
+        <button class='big-button' id='done-btn' disabled>Done</button>
+      </div>
+    </div>
+    <div id="completed" class="base" style="display:none;" >
+      <div id="code-div">
+        <h1>Your completion code is:</h1>
+        <h1 id="completion-code"></h1>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="../js/config.js"></script>
+  <script type="text/javascript" src="../js/funcs.js"></script>
+  <script type="text/javascript" src="../js/task.js"></script>
+</html>
