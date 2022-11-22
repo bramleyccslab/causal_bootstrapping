@@ -57,7 +57,6 @@ causal_bootstrapping/
 │   ├── gpt3-predictions.csv
 │   ├── gpt3-reports.csv
 │   └── playground.ipynb
-├── tree.txt
 └── trials
     ├── data
     │   ├── PM_LL.csv
@@ -90,6 +89,7 @@ Folder `openai/` contains an ipython notebook that I used to batch-retrieve self
 * A live experiment demo: <https://bramleylab.ppls.ed.ac.uk/experiments/bootstrapping/p/welcome.html>
 * Knitted analysis for manuscript: <https://bramleylab.ppls.ed.ac.uk/experiments/bootstrapping/analysis.html>
 * Working github repo with all dev history and some un-reported attempts: https://github.com/zhaobn/comlog
+* Cogsci paper [Powering up causal generalization: A model of human conceptual bootstrapping with adaptor grammars](https://escholarship.org/uc/item/8sh6k4rd)
 
 
 
