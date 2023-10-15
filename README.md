@@ -1,6 +1,6 @@
 # Supplementary Code and Data
 
-Implementations for manuscript [*A model of conceptual bootstrapping in human cognition*], by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
+Implementations for manuscript *A model of conceptual bootstrapping in human cognition*, by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
 
 ## Repo structure
 
