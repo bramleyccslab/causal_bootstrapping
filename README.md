@@ -1,6 +1,6 @@
 # Supplementary Code and Data
 
-Implementations for manuscript *How cognition bootstraps its way to complex concepts*, by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
+Implementations for manuscript [*How cognition bootstraps its way to complex concepts*](https://www.nature.com/articles/s41562-023-01719-1), by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
 
 ## Repo structure
 
@@ -39,11 +39,10 @@ causal_bootstrapping/
 │   │   ├── program_lib.py
 │   │   ├── program_sim.py
 │   │   ├── sims
-│   │   │   ├── construct.py
-│   │   │   ├── construct_a_post_samples.csv
-│   │   │   ├── decon.py
-│   │   │   ├── runGenerator.js
-│   │   │   └── simGenerator.js
+│   │   │   ├── process_combine.py
+│   │   │   ├── process_construct.py
+│   │   │   ├── process_decon.py
+│   │   │   └── process_flip.py
 │   │   └── task_terms.py
 │   ├── gp
 │   │   ├── gp_reg.py
@@ -63,9 +62,7 @@ causal_bootstrapping/
     │   ├── all_eqc.csv
     │   ├── eig_trials.csv
     │   ├── final_trials.csv
-    │   ├── final_trials_2.csv
-    │   ├── final_trials_flip.csv
-    │   └── flip_all_eqc.csv
+    │   └── final_trials_2.csv
     ├── get_pms.py
     ├── get_trials.py
     └── prep_pms.py
@@ -73,9 +70,9 @@ causal_bootstrapping/
 
 The `experiment/` folder contains code for the online experiment. A live demonstration is at <https://bramleylab.ppls.ed.ac.uk/experiments/bootstrapping/p/welcome.html>
 
-The `models/` folder contains python code (python 3.9) for the adaptor grammar model (`models/ag/`), the rational rules model (`models/pcfg/`), and the gaussian process regression model (`models/gp/`). 
+The `models/` folder contains python code (python 3.9) for the adaptor grammar model (`models/ag/`), the rational rules model (`models/pcfg/`), and the gaussian process regression model (`models/gp/`).
 
-For the adaptor grammar model, folder `sims` contains example scripts (`construct.py`, `decon.py`) to run the model. The `runGenerator.js` and `simGenerator.js` scripts can generative python scripts for each experimental condition in batch.
+For the adaptor grammar model, folder `sims` contains example scripts (`process_construct.py`, etc) to run the model. Modifications are needed to run the analyses in Supplementary Information. Contact me (Bonan Zhao, b.zhao@ed.ac.uk) for details.
 
 In `models/ag`, there are object-oriented implementaion treating programs, terms and routers all as classes (`base_classes.py`, `task_terms.py`, `program_lib.py`). Correpondingly, their "causal influence" are implemented as functions and methods in the classes (`base_methods.py`, `program_inf.py`, `program_sim.py` and `helpers.py`).  The `data/` folder contains necessary prep data, eg. task setups.
 
@@ -87,14 +84,5 @@ Folder `openai/` contains an ipython notebook that I used to batch-retrieve self
 
 * Experiment data, pre-regs and data analysis scripts are available in OSF repo <https://osf.io/9awhj/>
 * A live experiment demo: <https://bramleylab.ppls.ed.ac.uk/experiments/bootstrapping/p/welcome.html>
-* Knitted analysis for manuscript: <https://bramleylab.ppls.ed.ac.uk/experiments/bootstrapping/analysis.html>
 * Working github repo with all dev history and some un-reported attempts: https://github.com/zhaobn/comlog
 * Cogsci paper [Powering up causal generalization: A model of human conceptual bootstrapping with adaptor grammars](https://escholarship.org/uc/item/8sh6k4rd)
-
-
-
-
-
-
-
-
