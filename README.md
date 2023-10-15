@@ -1,6 +1,6 @@
 # Supplementary Code and Data
 
-Implementations for manuscript [*How cognition bootstraps its way to complex concepts*](https://www.nature.com/articles/s41562-023-01719-1), by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
+Implementations for manuscript [*A model of conceptual bootstrapping in human cognition*], by [Bonan Zhao](https://zhaobn.github.io), [Christopher G. Lucas](https://homepages.inf.ed.ac.uk/clucas2/), and [Neil R Bramley](https://www.bramleylab.ppls.ed.ac.uk/member/neil/).
 
 ## Repo structure
 
